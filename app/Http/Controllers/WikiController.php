@@ -114,7 +114,7 @@ class WikiController extends Controller
 
         if ($isDir) {
             foreach ($index['subcategories'] as $i => $item) {
-                $index['subcategories'][$i] = str_replace($wikiPath, '', $item);
+                $item = str_replace($wikiPath, '', $item);
                 $paths = explode('/', $item);
                 $index['subcategories'][$i] = [
                     'href' => $item,
