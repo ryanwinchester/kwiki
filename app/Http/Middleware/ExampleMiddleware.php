@@ -1,8 +1,9 @@
-<?php namespace Fungku\Http\Middleware;
+<?php namespace Fungku\Kwiki\Http\Middleware;
 
 use Closure;
 
-class ExampleMiddleware {
+class ExampleMiddleware
+{
 
     /**
      * Handle an incoming request.
@@ -15,5 +16,4 @@ class ExampleMiddleware {
     {
         return $next($request);
     }
-
 }

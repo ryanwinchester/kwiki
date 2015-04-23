@@ -1,4 +1,4 @@
-<?php namespace Fungku\Providers;
+<?php namespace Fungku\Kwiki\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

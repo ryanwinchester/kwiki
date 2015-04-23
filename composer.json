@@ -14,11 +14,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Fungku\\": "app/"
-        },
-        "classmap": [
-            "database/"
-        ]
+            "Fungku\\Kwiki\\": "app/"
+        }
     },
     "autoload-dev": {
         "classmap": [

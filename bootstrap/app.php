@@ -2,7 +2,7 @@
 
 require_once __DIR__.'/../vendor/autoload.php';
 
-// Dotenv::load(__DIR__.'/../');
+Dotenv::load(__DIR__.'/../');
 
 /*
 |--------------------------------------------------------------------------
@@ -19,8 +19,6 @@ $app = new Laravel\Lumen\Application;
 
 // $app->withFacades();
 
-// $app->withEloquent();
-
 /*
 |--------------------------------------------------------------------------
 | Register Container Bindings
@@ -34,12 +32,12 @@ $app = new Laravel\Lumen\Application;
 
 $app->singleton(
     'Illuminate\Contracts\Debug\ExceptionHandler',
-    'Fungku\Exceptions\Handler'
+    'Fungku\Kwiki\Exceptions\Handler'
 );
 
 $app->singleton(
     'Illuminate\Contracts\Console\Kernel',
-    'Fungku\Console\Kernel'
+    'Fungku\Kwiki\Console\Kernel'
 );
 
 /*
@@ -76,7 +74,7 @@ $app->singleton(
 |
 */
 
-// $app->register('Fungku\Providers\AppServiceProvider');
+// $app->register('Fungku\Kwiki\Providers\AppServiceProvider');
 
 /*
 |--------------------------------------------------------------------------
