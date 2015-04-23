@@ -1,10 +1,9 @@
 
 <ol class="breadcrumb">
-    @if (count($breadcrumbs))
+    <li><a href="/">Home</a></li>
+    @if (! empty($breadcrumbs[0]))
         @foreach ($breadcrumbs as $i => $crumb)
             <li><a href="/{{  implode('/', array_slice($breadcrumbs, 0, $i+1)) }}">{{ $crumb }}</a></li>
         @endforeach
-    @else
-        <li>Home</li>
     @endif
 </ol>
