@@ -1,26 +1,19 @@
 <?php namespace Fungku\Kwiki\Http\Controllers;
 
-use Illuminate\Filesystem\Filesystem;
-use Parsedown;
+use Fungku\Postmark\Parser;
 
 class WikiController extends Controller
 {
     /**
-     * @var Filesystem
-     */
-    private $filesystem;
-    /**
-     * @var Parsedown
+     * @var Parser
      */
     private $parser;
 
     /**
-     * @param Filesystem $filesystem
-     * @param Parsedown $parser
+     * @param Parser $parser
      */
-    public function __construct(Filesystem $filesystem, Parsedown $parser)
+    public function __construct(Parser $parser)
     {
-        $this->filesystem = $filesystem;
         $this->parser = $parser;
     }
 
@@ -91,61 +84,23 @@ class WikiController extends Controller
     }
 
     /**
-     * TODO: Extract most of this to a separate class
-     *
      * @param string $post
      * @return \Illuminate\View\View
      */
     private function makePage($post)
     {
         $wikiPath = base_path() . '/wiki';
-        $postPath = $wikiPath .'/'. $post;
-        $breadcrumb = explode('/', $post);
-        $isDir = false;
 
-        if ($this->filesystem->isDirectory($postPath)) {
-            $isDir = true;
-            $index['subcategories'] = $this->filesystem->directories($postPath);
-            $index['files'] = $this->filesystem->files($postPath);
-            $postPath .= '/index';
+        $content = $this->parser->parse($wikiPath, $post);
+
+        if (! empty($content['index'])) {
+            $content['post'] = view('wiki.category-list', $content['index']) . $content['post'];
         }
 
-        $file = $postPath .'.md';
-        if ($this->filesystem->exists($file)) {
-            $post = $this->parser->text($this->filesystem->get($file));
-        } else {
-            $post = '';
-        }
-
-        if ($isDir) {
-            foreach ($index['subcategories'] as $i => $item) {
-                $item = str_replace($wikiPath, '', $item);
-                $paths = explode('/', $item);
-                $index['subcategories'][$i] = [
-                    'href' => $item,
-                    'name' => array_pop($paths),
-                ];
-            }
-            foreach ($index['files'] as $i => $item) {
-                $item = str_replace($wikiPath, '', $item);
-                $item = str_replace('.md', '', $item);
-                $paths = explode('/', $item);
-                $index['files'][$i] = [
-                    'href' => $item,
-                    'name' => array_pop($paths),
-                ];
-                if ($index['files'][$i]['name'] === 'index') {
-                    unset($index['files'][$i]);
-                }
-            }
-            $post = view('wiki.category-list', $index) . $post;
-        }
-
-        $content = [
-            'breadcrumb' => $breadcrumb,
-            'post'       => $post,
-        ];
-
-        return view('wiki.page', $content);
+        return view('wiki.page', [
+            'breadcrumb' => explode('/', $post),
+            'index'      => $content['index'],
+            'post'       => $content['post'],
+        ]);
     }
 }

@@ -7,7 +7,7 @@
     "require": {
         "laravel/lumen-framework": "5.0.*",
         "vlucas/phpdotenv": "~1.0",
-        "erusev/parsedown": "1.5.2"
+        "fungku/postmark": "dev-master@dev"
     },
     "require-dev": {
         "phpunit/phpunit": "~4.0"
