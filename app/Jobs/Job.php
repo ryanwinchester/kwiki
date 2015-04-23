@@ -1,4 +1,4 @@
-<?php namespace App\Jobs;
+<?php namespace Fungku\Jobs;
 
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;

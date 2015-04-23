@@ -34,12 +34,12 @@ $app = new Laravel\Lumen\Application;
 
 $app->singleton(
     'Illuminate\Contracts\Debug\ExceptionHandler',
-    'App\Exceptions\Handler'
+    'Fungku\Exceptions\Handler'
 );
 
 $app->singleton(
     'Illuminate\Contracts\Console\Kernel',
-    'App\Console\Kernel'
+    'Fungku\Console\Kernel'
 );
 
 /*
@@ -76,7 +76,7 @@ $app->singleton(
 |
 */
 
-// $app->register('App\Providers\AppServiceProvider');
+// $app->register('Fungku\Providers\AppServiceProvider');
 
 /*
 |--------------------------------------------------------------------------

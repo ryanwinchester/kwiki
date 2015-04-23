@@ -1,4 +1,4 @@
-<?php namespace App\Http\Middleware;
+<?php namespace Fungku\Http\Middleware;
 
 use Closure;
 
