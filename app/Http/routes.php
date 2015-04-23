@@ -1,12 +1,13 @@
 <?php
 
-$app->get('/', function () use ($app) {
-    return 'home';
-});
-
 // ------------------------------------------------------------------------------
 // Wiki routes
 // ------------------------------------------------------------------------------
+$app->get('/', [
+    'uses' => 'Fungku\Kwiki\Http\Controllers\WikiController@index',
+    'as'   => 'wiki.index'
+]);
+
 $app->get('{one}', [
     'uses' => 'Fungku\Kwiki\Http\Controllers\WikiController@one',
     'as'   => 'wiki.one'

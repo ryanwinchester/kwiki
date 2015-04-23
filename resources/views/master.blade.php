@@ -19,6 +19,10 @@
 </head>
 <body>
 
+<section class="header container">
+    <h1 style="font-size:3.8rem;">Kwiki</h1>
+</section>
+
 @yield('content')
 
 <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>

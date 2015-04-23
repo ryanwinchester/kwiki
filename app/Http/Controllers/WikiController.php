@@ -18,15 +18,30 @@ class WikiController extends Controller
     }
 
     /**
-     * @param string $one
-     * @param string $two
-     * @param string $three
-     * @param string $four
      * @return \Illuminate\View\View
      */
-    public function four($one, $two, $three, $four)
+    public function index()
     {
-        return $this->getPage($one, $two, $three, $four);
+        return $this->makePage();
+    }
+
+    /**
+     * @param string $one
+     * @return \Illuminate\View\View
+     */
+    public function one($one)
+    {
+        return $this->getPage($one);
+    }
+
+    /**
+     * @param string $one
+     * @param string $two
+     * @return \Illuminate\View\View
+     */
+    public function two($one, $two)
+    {
+        return $this->getPage($one, $two);
     }
 
     /**
@@ -43,20 +58,13 @@ class WikiController extends Controller
     /**
      * @param string $one
      * @param string $two
+     * @param string $three
+     * @param string $four
      * @return \Illuminate\View\View
      */
-    public function two($one, $two)
+    public function four($one, $two, $three, $four)
     {
-        return $this->getPage($one, $two);
-    }
-
-    /**
-     * @param string $one
-     * @return \Illuminate\View\View
-     */
-    public function one($one)
-    {
-        return $this->getPage($one);
+        return $this->getPage($one, $two, $three, $four);
     }
 
     /**
@@ -87,7 +95,7 @@ class WikiController extends Controller
      * @param string $post
      * @return \Illuminate\View\View
      */
-    private function makePage($post)
+    private function makePage($post = null)
     {
         $wikiPath = base_path() . '/wiki';
 

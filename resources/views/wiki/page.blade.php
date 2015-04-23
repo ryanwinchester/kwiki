@@ -1,5 +1,8 @@
 @extends('master')
 
+@section('title')
+    <title>{{ current(array_slice($breadcrumbs, -1)) }} &ndash; Kwiki</title>
+@stop
 
 @section('content')
 
