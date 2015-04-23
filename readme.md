@@ -16,4 +16,3 @@ Using composer:
 composer create-project fungku/kwiki --prefer-dist
 ```
  
- 
