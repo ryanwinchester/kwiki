@@ -174,12 +174,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fungku/postmark.git",
-                "reference": "845dd03c9f5a4e724701f161d0bdfb8f13adbd8e"
+                "reference": "d58f0811d71e0a44c65c95e9adc6ae75759e140e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fungku/postmark/zipball/845dd03c9f5a4e724701f161d0bdfb8f13adbd8e",
-                "reference": "845dd03c9f5a4e724701f161d0bdfb8f13adbd8e",
+                "url": "https://api.github.com/repos/fungku/postmark/zipball/d58f0811d71e0a44c65c95e9adc6ae75759e140e",
+                "reference": "d58f0811d71e0a44c65c95e9adc6ae75759e140e",
                 "shasum": ""
             },
             "require": {
@@ -203,7 +203,7 @@
                 }
             ],
             "description": "Parse markdown for a blog or wiki",
-            "time": "2015-04-23 08:27:42"
+            "time": "2015-04-23 16:57:49"
         },
         {
             "name": "illuminate/auth",

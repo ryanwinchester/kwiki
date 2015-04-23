@@ -74,7 +74,7 @@ $app->singleton(
 |
 */
 
-// $app->register('Fungku\Kwiki\Providers\AppServiceProvider');
+$app->register('Fungku\Kwiki\Providers\AppServiceProvider');
 
 /*
 |--------------------------------------------------------------------------

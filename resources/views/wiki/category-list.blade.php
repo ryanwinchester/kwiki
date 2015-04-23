@@ -1,17 +1,17 @@
 
-@if (count($subcategories))
+@if (count($index['subcategories']))
     <h3>Subcategories</h3>
     <ol>
-        @foreach ($subcategories as $subcategory)
+        @foreach ($index['subcategories'] as $subcategory)
             <li><a href="{{ $subcategory['href'] }}">{{ $subcategory['name'] }}</a></li>
         @endforeach
     </ol>
 @endif
 
-@if (count($files))
+@if (count($index['files']))
     <h3>Files</h3>
     <ol>
-        @foreach ($files as $file)
+        @foreach ($index['files'] as $file)
             <li><a href="{{ $file['href'] }}">{{ $file['name'] }}</a></li>
         @endforeach
     </ol>

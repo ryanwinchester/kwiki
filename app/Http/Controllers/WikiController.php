@@ -1,20 +1,20 @@
 <?php namespace Fungku\Kwiki\Http\Controllers;
 
-use Fungku\Postmark\Parser;
+use Fungku\Postmark\Postmark;
 
 class WikiController extends Controller
 {
     /**
-     * @var Parser
+     * @var Postmark
      */
-    private $parser;
+    private $postmark;
 
     /**
-     * @param Parser $parser
+     * @param Postmark $postmark
      */
-    public function __construct(Parser $parser)
+    public function __construct(Postmark $postmark)
     {
-        $this->parser = $parser;
+        $this->postmark = $postmark;
     }
 
     /**
@@ -91,16 +91,8 @@ class WikiController extends Controller
     {
         $wikiPath = base_path() . '/wiki';
 
-        $content = $this->parser->parse($wikiPath, $post);
+        $content = $this->postmark->getContent($wikiPath, $post);
 
-        if (! empty($content['index'])) {
-            $content['post'] = view('wiki.category-list', $content['index']) . $content['post'];
-        }
-
-        return view('wiki.page', [
-            'breadcrumb' => explode('/', $post),
-            'index'      => $content['index'],
-            'post'       => $content['post'],
-        ]);
+        return view('wiki.page', $content);
     }
 }
