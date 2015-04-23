@@ -1,3 +1,0 @@
-# Example Category
-
-Category description

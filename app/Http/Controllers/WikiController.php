@@ -110,7 +110,12 @@ class WikiController extends Controller
             $postPath .= '/index';
         }
 
-        $post = $this->parser->text($this->filesystem->get($postPath .'.md'));
+        $file = $postPath .'.md';
+        if ($this->filesystem->exists($file)) {
+            $post = $this->parser->text($this->filesystem->get($file));
+        } else {
+            $post = '';
+        }
 
         if ($isDir) {
             foreach ($index['subcategories'] as $i => $item) {
