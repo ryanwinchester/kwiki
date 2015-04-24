@@ -43,7 +43,7 @@ class WikiController extends Controller
      */
     public function one($one)
     {
-        return $this->getPage($one);
+        return $this->makePage($one);
     }
 
     /**
@@ -53,7 +53,7 @@ class WikiController extends Controller
      */
     public function two($one, $two)
     {
-        return $this->getPage($one, $two);
+        return $this->makePage($one.'/'.$two);
     }
 
     /**
@@ -64,7 +64,7 @@ class WikiController extends Controller
      */
     public function three($one, $two, $three)
     {
-        return $this->getPage($one, $two, $three);
+        return $this->makePage($one.'/'.$two.'/'.$three);
     }
 
     /**
@@ -76,30 +76,6 @@ class WikiController extends Controller
      */
     public function four($one, $two, $three, $four)
     {
-        return $this->getPage($one, $two, $three, $four);
-    }
-
-    /**
-     * @param string $one
-     * @param string $two
-     * @param string $three
-     * @param string $four
-     * @return \Illuminate\View\View
-     */
-    private function getPage($one, $two = null, $three = null, $four = null)
-    {
-        if (is_null($two)) {
-            return $this->makePage($one);
-        }
-
-        if (is_null($three)) {
-            return $this->makePage($one.'/'.$two);
-        }
-
-        if (is_null($four)) {
-            return $this->makePage($one.'/'.$two.'/'.$three);
-        }
-
         return $this->makePage($one.'/'.$two.'/'.$three.'/'.$four);
     }
 
