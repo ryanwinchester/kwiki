@@ -67,3 +67,9 @@ constant `WIKI_PATH`.
 
 Move or rename your wiki view template to wherever or whatever you want. Just update `app/Http/Controllers/WikiController.php`
 constant `WIKI_VIEW_PAGE`.
+
+## The default styling is very basic
+
+Navigating to a category example:
+
+![Very basic default styling](https://s3.amazonaws.com/fungku/kwiki/fungku-kwiki-category.png)
