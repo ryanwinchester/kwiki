@@ -37,9 +37,27 @@ debug to false.
 
 By default the markdown parser used is [erusev/parsedown](https://github.com/erusev/parsedown). To use a different one, 
 you need to make your own parser that implements the `Parseable` interface or create an adapter for a different library
-that implements `Parseable`. Then, to take advantage of the IOC container you need to change the binding in
+that implements `Parseable`. Then, you should change the binding in
 `app/Providers/AppServiceProvider.php` to your custom parser.
  
 ```php
 $this->app->bind(Parseable::class, MyCustomParser::class);
 ```
+
+## Understanding the data passed to your views
+
+You will have three variables you can use in your wiki page view:
+
+- `$breadcrumbs` is an array of breadcrumbs.
+- `$index` is available if you have navigated to a directory, or an empty array otherwise
+    - `$index['subcategories']` is an array of subdirectories in your current directory
+    - `$index['files']` is an array of files in your current directory
+- `$post` is a string of your parsed markdown content
+
+## Changing default directories
+
+Move or rename your wiki directory to wherever or whatever you want. Just update `app/Http/Controllers/WikiController.php`
+constant `WIKI_PATH`.
+
+Move or rename your wiki view template to wherever or whatever you want. Just update `app/Http/Controllers/WikiController.php`
+constant `WIKI_VIEW_PAGE`.
