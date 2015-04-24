@@ -174,12 +174,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fungku/postmark.git",
-                "reference": "d58f0811d71e0a44c65c95e9adc6ae75759e140e"
+                "reference": "42a52ed3eac8da3c50d98e3d057d31c0dba05419"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fungku/postmark/zipball/d58f0811d71e0a44c65c95e9adc6ae75759e140e",
-                "reference": "d58f0811d71e0a44c65c95e9adc6ae75759e140e",
+                "url": "https://api.github.com/repos/fungku/postmark/zipball/42a52ed3eac8da3c50d98e3d057d31c0dba05419",
+                "reference": "42a52ed3eac8da3c50d98e3d057d31c0dba05419",
                 "shasum": ""
             },
             "require": {
@@ -203,7 +203,7 @@
                 }
             ],
             "description": "Parse markdown for a blog or wiki",
-            "time": "2015-04-23 16:57:49"
+            "time": "2015-04-24 05:19:11"
         },
         {
             "name": "illuminate/auth",
@@ -1298,16 +1298,16 @@
         },
         {
             "name": "laravel/lumen-framework",
-            "version": "v5.0.4",
+            "version": "v5.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/lumen-framework.git",
-                "reference": "b42e3375473666e5008466aec9bfaffd4c702326"
+                "reference": "e66451cc5647cf44906ae73f454e94ba0b6ff69f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/lumen-framework/zipball/b42e3375473666e5008466aec9bfaffd4c702326",
-                "reference": "b42e3375473666e5008466aec9bfaffd4c702326",
+                "url": "https://api.github.com/repos/laravel/lumen-framework/zipball/e66451cc5647cf44906ae73f454e94ba0b6ff69f",
+                "reference": "e66451cc5647cf44906ae73f454e94ba0b6ff69f",
                 "shasum": ""
             },
             "require": {
@@ -1382,7 +1382,7 @@
                 "laravel",
                 "lumen"
             ],
-            "time": "2015-04-23 03:12:51"
+            "time": "2015-04-24 02:35:38"
         },
         {
             "name": "league/flysystem",

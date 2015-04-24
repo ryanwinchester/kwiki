@@ -8,7 +8,7 @@ class WikiController extends Controller
      * The path to the directory containing your markdown files
      * relative to the project root.
      */
-    const WIKI_PATH = 'wiki/';
+    const WIKI_PATH = '/wiki';
 
     /**
      * The view to use for the wiki pages relative to the resources/views
