@@ -5,6 +5,18 @@ use Fungku\Postmark\Postmark;
 class WikiController extends Controller
 {
     /**
+     * The path to the directory containing your markdown files
+     * relative to the project root.
+     */
+    const WIKI_PATH = 'wiki/';
+
+    /**
+     * The view to use for the wiki pages relative to the resources/views
+     * folder and separated by dot notation
+     */
+    const WIKI_VIEW_PAGE = 'wiki.page';
+
+    /**
      * @var Postmark
      */
     private $postmark;
@@ -97,10 +109,10 @@ class WikiController extends Controller
      */
     private function makePage($post = null)
     {
-        $wikiPath = base_path() . '/wiki';
+        $wikiPath = base_path() . self::WIKI_PATH;
 
         $content = $this->postmark->getContent($wikiPath, $post);
 
-        return view('wiki.page', $content);
+        return view(self::WIKI_VIEW_PAGE, $content);
     }
 }
