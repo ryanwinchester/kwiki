@@ -70,6 +70,8 @@ constant `WIKI_VIEW_PAGE`.
 
 ## The default styling is very basic
 
+By default we include a bootswatch theme from a CDN and `public/css/app.css` for custom styles.
+
 Navigating to a category example:
 
 ![Very basic default styling](https://s3.amazonaws.com/fungku/kwiki/fungku-kwiki-category.png)
