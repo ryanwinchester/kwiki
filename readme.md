@@ -81,3 +81,9 @@ Navigating to a category example:
 Plans for the near future might be a bit nicer default style, but more importantly some sort of "deslugify" function for showing the categories and post names in the view. Currently it just shows directory names and file names (with the extension removed). Otherwise, I'm completely open to criticisms and suggestions since it already fulfils my requirements.
 
 I will probably extract a package out of it, but it will be laravel-specific, due to the routes, controllers, and service provider.
+
+## Powered by
+
+- [Lumen](https://github.com/laravel/lumen) - Laravel's official micro framework
+- [Postmark](https://github.com/fungku/postmark) - A package I wrote that basically does all the work
+- [Parsedown](https://github.com/erusev/parsedown) - A popular markdown parser, and this project's default
