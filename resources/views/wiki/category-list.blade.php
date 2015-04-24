@@ -9,7 +9,7 @@
 @endif
 
 @if (count($index['files']))
-    <h3>Files</h3>
+    <h3>Posts</h3>
     <ol>
         @foreach ($index['files'] as $file)
             <li><a href="{{ $file['href'] }}">{{ $file['name'] }}</a></li>
