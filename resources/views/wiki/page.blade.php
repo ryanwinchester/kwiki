@@ -1,8 +1,10 @@
 @extends('master')
 
-@section('title')
-    <title>{{ current(array_slice($breadcrumbs, -1)) }} &ndash; Kwiki</title>
-@stop
+@unless (empty($title))
+    @section('title')
+        <title>{{ $title }} &ndash; Dev Wiki</title>
+    @stop
+@endunless
 
 @section('content')
 
