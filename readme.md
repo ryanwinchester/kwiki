@@ -52,12 +52,13 @@ $this->app->bind(Parseable::class, MyCustomParser::class);
 
 ## Understanding the data passed to your views
 
-You will have three variables you can use in your wiki page view:
+You will have four variables you can use in your wiki page view:
 
-1. `$breadcrumbs` is an array of breadcrumbs.
+1. `$title` is the title of the post or category.
+1. `$breadcrumbs` is an array of breadcrumbs with `href` and `name` indexes
 2. `$index` is available if you have navigated to a directory, or an empty array otherwise
-    - `$index['subcategories']` is an array of subdirectories in your current directory
-    - `$index['files']` is an array of files in your current directory
+    - `$index['subcategories']` is an array of subdirectories in your current directory with `href` and `name` indexes
+    - `$index['files']` is an array of files in your current directory with `href` and `name` indexes
 3. `$post` is a string of your parsed markdown content
 
 ## Changing default directories
