@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f0a27aa0c202fc8ed2b10589d1033b04",
+    "hash": "09c18390ba77a75168e97be37e9a9480",
     "packages": [
         {
             "name": "danielstjules/stringy",
@@ -170,21 +170,25 @@
         },
         {
             "name": "fungku/postmark",
-            "version": "dev-master",
+            "version": "v0.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fungku/postmark.git",
-                "reference": "42a52ed3eac8da3c50d98e3d057d31c0dba05419"
+                "reference": "1a3e081fb75f3e405d6e3ddf6d4ddabefa50247d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fungku/postmark/zipball/42a52ed3eac8da3c50d98e3d057d31c0dba05419",
-                "reference": "42a52ed3eac8da3c50d98e3d057d31c0dba05419",
+                "url": "https://api.github.com/repos/fungku/postmark/zipball/1a3e081fb75f3e405d6e3ddf6d4ddabefa50247d",
+                "reference": "1a3e081fb75f3e405d6e3ddf6d4ddabefa50247d",
                 "shasum": ""
             },
             "require": {
                 "erusev/parsedown": "~1.5",
-                "illuminate/filesystem": "~5.0"
+                "illuminate/filesystem": "~5.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpspec/phpspec": "~2.0"
             },
             "type": "library",
             "autoload": {
@@ -203,7 +207,7 @@
                 }
             ],
             "description": "Parse markdown for a blog or wiki",
-            "time": "2015-04-24 05:19:11"
+            "time": "2015-04-27 19:57:14"
         },
         {
             "name": "illuminate/auth",
@@ -1298,16 +1302,16 @@
         },
         {
             "name": "laravel/lumen-framework",
-            "version": "v5.0.5",
+            "version": "v5.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/lumen-framework.git",
-                "reference": "e66451cc5647cf44906ae73f454e94ba0b6ff69f"
+                "reference": "a5789dcb535434659489cbe15d07d93861ba131a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/lumen-framework/zipball/e66451cc5647cf44906ae73f454e94ba0b6ff69f",
-                "reference": "e66451cc5647cf44906ae73f454e94ba0b6ff69f",
+                "url": "https://api.github.com/repos/laravel/lumen-framework/zipball/a5789dcb535434659489cbe15d07d93861ba131a",
+                "reference": "a5789dcb535434659489cbe15d07d93861ba131a",
                 "shasum": ""
             },
             "require": {
@@ -1382,7 +1386,7 @@
                 "laravel",
                 "lumen"
             ],
-            "time": "2015-04-24 02:35:38"
+            "time": "2015-04-27 14:47:54"
         },
         {
             "name": "league/flysystem",
@@ -3318,9 +3322,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "fungku/postmark": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
