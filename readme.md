@@ -83,7 +83,7 @@ Plans for the near future might be a bit nicer default style. Otherwise, I'm com
 
 I might extract a package out of it, but it will be laravel-specific, due to the routes, controllers, and service provider.
 
-If you wanted something outside of the laravel universe you could roll yoru own, and you might be interested in my postmark package linked below.
+If you wanted something outside of the laravel universe you could roll your own and you might be interested in my postmark package linked below.
 
 ## Powered by
 
