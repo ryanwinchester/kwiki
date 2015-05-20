@@ -5,6 +5,8 @@
  [![License](https://img.shields.io/packagist/l/fungku/kwiki.svg?style=flat-square)](https://packagist.org/packages/fungku/kwiki)
  [![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/g/fungku/kwiki.svg?style=flat-square)](https://scrutinizer-ci.com/g/fungku/kwiki/?branch=master)
  [![Build Status](https://img.shields.io/travis/fungku/kwiki.svg?style=flat-square)](https://travis-ci.org/fungku/kwiki)
+ 
+ [![SensioLabsInsight](https://insight.sensiolabs.com/projects/7ccb3b35-051a-4026-b618-d2b8dd1da64c/big.png)](https://insight.sensiolabs.com/projects/7ccb3b35-051a-4026-b618-d2b8dd1da64c)
 
 ## markdown wiki/blog
 
