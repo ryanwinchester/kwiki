@@ -2,7 +2,7 @@
     "name": "fungku/kwiki",
     "description": "Quick wiki or blog with markdown files",
     "keywords": ["wiki", "blog", "markdown"],
-    "license": "apache-2",
+    "license": "Apache-2.0",
     "type": "project",
     "require": {
         "laravel/lumen-framework": "5.0.*",
