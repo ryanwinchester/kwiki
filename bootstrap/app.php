@@ -2,7 +2,7 @@
 
 require_once __DIR__.'/../vendor/autoload.php';
 
-Dotenv::load(__DIR__.'/../');
+// Dotenv::load(__DIR__.'/../');
 
 /*
 |--------------------------------------------------------------------------
@@ -10,7 +10,7 @@ Dotenv::load(__DIR__.'/../');
 |--------------------------------------------------------------------------
 |
 | Here we will load the environment and create the application instance
-| that servers as the central piece of the framework. We'll use this
+| that serves as the central piece of this framework. We'll use this
 | application as an "IoC" container and router for this framework.
 |
 */
@@ -20,6 +20,8 @@ $app = new Laravel\Lumen\Application(
 );
 
 // $app->withFacades();
+
+// $app->withEloquent();
 
 /*
 |--------------------------------------------------------------------------
@@ -33,13 +35,13 @@ $app = new Laravel\Lumen\Application(
 */
 
 $app->singleton(
-    'Illuminate\Contracts\Debug\ExceptionHandler',
-    'Fungku\Kwiki\Exceptions\Handler'
+    Illuminate\Contracts\Debug\ExceptionHandler::class,
+    App\Exceptions\Handler::class
 );
 
 $app->singleton(
-    'Illuminate\Contracts\Console\Kernel',
-    'Fungku\Kwiki\Console\Kernel'
+    Illuminate\Contracts\Console\Kernel::class,
+    App\Console\Kernel::class
 );
 
 /*
@@ -54,11 +56,11 @@ $app->singleton(
 */
 
 // $app->middleware([
-//     // 'Illuminate\Cookie\Middleware\EncryptCookies',
-//     // 'Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse',
-//     // 'Illuminate\Session\Middleware\StartSession',
-//     // 'Illuminate\View\Middleware\ShareErrorsFromSession',
-//     // 'Laravel\Lumen\Http\Middleware\VerifyCsrfToken',
+//     // Illuminate\Cookie\Middleware\EncryptCookies::class,
+//     // Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
+//     // Illuminate\Session\Middleware\StartSession::class,
+//     // Illuminate\View\Middleware\ShareErrorsFromSession::class,
+//     // Laravel\Lumen\Http\Middleware\VerifyCsrfToken::class,
 // ]);
 
 // $app->routeMiddleware([
@@ -76,7 +78,8 @@ $app->singleton(
 |
 */
 
-$app->register('Fungku\Kwiki\Providers\AppServiceProvider');
+// $app->register(App\Providers\AppServiceProvider::class);
+// $app->register(App\Providers\EventServiceProvider::class);
 
 /*
 |--------------------------------------------------------------------------
@@ -89,6 +92,8 @@ $app->register('Fungku\Kwiki\Providers\AppServiceProvider');
 |
 */
 
-require __DIR__.'/../app/Http/routes.php';
+$app->group(['namespace' => 'App\Http\Controllers'], function ($app) {
+    require __DIR__.'/../app/Http/routes.php';
+});
 
 return $app;

@@ -4,7 +4,6 @@ use Closure;
 
 class ExampleMiddleware
 {
-
     /**
      * Handle an incoming request.
      *

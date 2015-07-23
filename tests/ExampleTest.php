@@ -2,7 +2,6 @@
 
 class ExampleTest extends TestCase
 {
-
     /**
      * A basic test example.
      *
@@ -10,9 +9,7 @@ class ExampleTest extends TestCase
      */
     public function testBasicExample()
     {
-        $response = $this->call('GET', '/');
-
-        $this->assertResponseOk();
-        $this->assertEquals('Hello World', $response->getContent());
+        $this->visit('/')
+             ->see('Lumen.');
     }
 }
