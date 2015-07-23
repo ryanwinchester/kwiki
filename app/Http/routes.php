@@ -4,26 +4,26 @@
 // Wiki routes
 // ------------------------------------------------------------------------------
 $app->get('/', [
-    'uses' => 'WikiController@index',
+    'uses' => 'WikiController@makePage',
     'as'   => 'wiki.index'
 ]);
 
 $app->get('{one}', [
-    'uses' => 'WikiController@one',
+    'uses' => 'WikiController@makePage',
     'as'   => 'wiki.one'
 ]);
 
 $app->get('{one}/{two}', [
-    'uses' => 'WikiController@two',
+    'uses' => 'WikiController@makePage',
     'as'   => 'wiki.two'
 ]);
 
 $app->get('{one}/{two}/{three}', [
-    'uses' => 'WikiController@three',
+    'uses' => 'WikiController@makePage',
     'as'   => 'wiki.three'
 ]);
 
 $app->get('{one}/{two}/{three}/{four}', [
-    'uses' => 'WikiController@four',
+    'uses' => 'WikiController@makePage',
     'as'   => 'wiki.four'
 ]);
