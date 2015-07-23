@@ -1,4 +1,6 @@
-<?php namespace Fungku\Kwiki\Http\Controllers;
+<?php
+
+namespace Fungku\Kwiki\Http\Controllers;
 
 use Fungku\Postmark\Postmark;
 

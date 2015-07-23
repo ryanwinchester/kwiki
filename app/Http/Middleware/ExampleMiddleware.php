@@ -1,4 +1,6 @@
-<?php namespace Fungku\Kwiki\Http\Middleware;
+<?php
+
+namespace Fungku\Kwiki\Http\Middleware;
 
 use Closure;
 

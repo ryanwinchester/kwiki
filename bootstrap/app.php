@@ -36,12 +36,12 @@ $app = new Laravel\Lumen\Application(
 
 $app->singleton(
     Illuminate\Contracts\Debug\ExceptionHandler::class,
-    App\Exceptions\Handler::class
+    Fungku\Kwiki\Exceptions\Handler::class
 );
 
 $app->singleton(
     Illuminate\Contracts\Console\Kernel::class,
-    App\Console\Kernel::class
+    Fungku\Kwiki\Console\Kernel::class
 );
 
 /*
@@ -78,8 +78,8 @@ $app->singleton(
 |
 */
 
-// $app->register(App\Providers\AppServiceProvider::class);
-// $app->register(App\Providers\EventServiceProvider::class);
+$app->register(Fungku\Kwiki\Providers\AppServiceProvider::class);
+// $app->register(Fungku\Kwiki\Providers\EventServiceProvider::class);
 
 /*
 |--------------------------------------------------------------------------
@@ -92,7 +92,7 @@ $app->singleton(
 |
 */
 
-$app->group(['namespace' => 'App\Http\Controllers'], function ($app) {
+$app->group(['namespace' => 'Fungku\Kwiki\Http\Controllers'], function ($app) {
     require __DIR__.'/../app/Http/routes.php';
 });
 
