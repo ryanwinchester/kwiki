@@ -12,7 +12,8 @@
     },
     "require-dev": {
         "phpunit/phpunit": "~4.0",
-        "fzaninotto/faker": "~1.0"
+        "fzaninotto/faker": "~1.0",
+        "laravel/homestead": "^2.1"
     },
     "autoload": {
         "psr-4": {
