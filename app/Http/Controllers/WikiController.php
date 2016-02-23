@@ -2,7 +2,7 @@
 
 namespace Fungku\Kwiki\Http\Controllers;
 
-use Fungku\Postmark\Postmark;
+use Fungku\Pagemark\Pagemark;
 
 class WikiController extends Controller
 {
@@ -19,16 +19,16 @@ class WikiController extends Controller
     private $wikiView = 'wiki.page';
 
     /**
-     * @var Postmark
+     * @var Pagemark
      */
-    private $postmark;
+    private $pagemark;
 
     /**
-     * @param Postmark $postmark
+     * @param Pagemark $pagemark
      */
-    public function __construct(Postmark $postmark)
+    public function __construct(Pagemark $pagemark)
     {
-        $this->postmark = $postmark;
+        $this->pagemark = $pagemark;
     }
 
     /**
@@ -40,7 +40,7 @@ class WikiController extends Controller
 
         $post = implode('/', func_get_args());
 
-        $content = $this->postmark->getContent($wikiPath, $post);
+        $content = $this->pagemark->getContent($wikiPath, $post);
 
         return view($this->wikiView, $content);
     }
