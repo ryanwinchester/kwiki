@@ -2,7 +2,7 @@
 
 namespace Fungku\Kwiki\Http\Controllers;
 
-use Fungku\Pagemark\Pagemark;
+use Pagemark\Pagemark;
 
 class WikiController extends Controller
 {

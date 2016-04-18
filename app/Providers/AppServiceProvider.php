@@ -2,8 +2,8 @@
 
 namespace Fungku\Kwiki\Providers;
 
-use Fungku\Postmark\Contracts\Parseable;
-use Fungku\Postmark\Parser;
+use Pagemark\Contracts\Parseable;
+use Pagemark\Parser;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
