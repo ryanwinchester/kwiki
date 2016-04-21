@@ -66,10 +66,10 @@ You will have four variables you can use in your wiki page view:
 ## Changing default directories
 
 Move or rename your wiki directory to wherever or whatever you want. Just update `app/Http/Controllers/WikiController.php`
-constant `WIKI_PATH`.
+variable `$wikiPath`.
 
 Move or rename your wiki view template to wherever or whatever you want. Just update `app/Http/Controllers/WikiController.php`
-constant `WIKI_VIEW_PAGE`.
+variable `$wikiView`.
 
 ## The default styling is very basic
 
@@ -85,10 +85,10 @@ Plans for the near future might be a bit nicer default style. Otherwise, I'm com
 
 I might extract a package out of it, but it will be laravel-specific, due to the routes, controllers, and service provider.
 
-If you wanted something outside of the laravel universe you could roll your own and you might be interested in my postmark package linked below.
+If you wanted something outside of the laravel universe you could roll your own and you might be interested in my pagemark package linked below.
 
 ## Powered by
 
 - [Lumen](https://github.com/laravel/lumen) - Laravel's official micro framework
-- [Pagemark](https://github.com/fungku/pagemark) - A package I wrote that basically does all the work
+- [Pagemark](https://github.com/ryanwinchester/pagemark) - A package I wrote that basically does all the work
 - [Parsedown](https://github.com/erusev/parsedown) - A popular markdown parser, and this project's default
